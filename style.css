@@ -25,7 +25,7 @@ body {
 #dropZone.dragover {
     background-color: #1b0d00;
     border-color: #ff7b00;
-    color: #ff7b00;
+    color: rgb(255, 210, 168);
 }
 
 #inventory-editor {
