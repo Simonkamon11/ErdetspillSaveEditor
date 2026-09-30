@@ -28,8 +28,16 @@
         <input type="file" id="fileInput" accept=".cfg" hidden>
     </div>
 
+    <br>
+
     <button id="download-btn" class="orangeBtn" style="display: none;">download</button>
 
+    <div id="name-container" style="display: none;">
+        <input type="text" placeholder="navn" id="nameInput" class="textInput">
+        <button onsubmit="setName()" id="nameBtn">sett</button>
+        <h2 id="name">Navn: </h2>
+    </div>
+    
     <div id="inventory-editor">
         <div id="items">
             <button id="reset-btn" class="orangeBtn" style="display: none;">reset</button>

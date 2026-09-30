@@ -25,7 +25,11 @@ body {
 #dropZone.dragover {
     background-color: #1b0d00;
     border-color: #ff7b00;
-    color: rgb(255, 210, 168);
+    color: #ff7b00;
+}
+
+#name-container {
+    display: flex;
 }
 
 #inventory-editor {
@@ -81,14 +85,38 @@ button:hover {
     margin-bottom: 20px;
 }
 
+.textInput {
+    color: #292cff;
+    background-color: #000142;
+
+    font-family: "VT323", sans-serif;
+    font-size: 20px;
+
+    border-color: #292cff;
+    border-style: solid;
+    border-radius: 5px;
+
+    padding: 5px;
+    margin: 3px;
+}
+
+.textInput::placeholder {
+    color: #2022b3;
+    font-family: "VT323", sans-serif;
+}
+
+#name {
+    margin-top: 0;
+}
+
 #inventory {
+    font-family: "VT323", sans-serif;
     width: fit-content;
     display: flex;
     flex-direction: row;
     align-items: space-evenly;
     align-content: flex-start;
     flex-wrap: wrap;
-    color: #b44aff;
     height: 500px;
 }
 

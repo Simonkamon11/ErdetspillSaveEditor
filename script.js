@@ -2,6 +2,10 @@ function el(id) {
     return document.getElementById(id)
 }
 
+function title(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
 const dropZone = el("dropZone");
 const fileInput = el("fileInput");
 
@@ -63,6 +67,9 @@ function startEditor(data) {
     } else {
         startInventory(null)
     }
+    if(data.includes("player_name")) {
+        startName()
+    }
 }
 
 function createSaveData() {
@@ -77,7 +84,12 @@ function createSaveData() {
     } else {
         data += `\n[inventar]\n\n${inventoryData}`;
     }
-    return data
+    if(playerName) {
+        if(data !== null) {
+            data = data.replace(/(?<=player_name=).*/, `"${playerName}"`);
+        }
+    }
+    return data;
 }
 
 el("download-btn").addEventListener("click", downloadSave);
@@ -99,6 +111,13 @@ function downloadSave() {
     link.click();
 
     URL.revokeObjectURL(url);
+}
+
+function startName() {
+    el("name-container").style.display = "block";
+    var nameElement = el("name");
+
+    nameElement.textContent = "Navn: " + CONTENT.match(/(?<=player_name=).*/)[0].replace(/"/g, "");
 }
 
 let inventory = {};
@@ -164,4 +183,30 @@ function createInventoryData() {
     }
 
     return result;
+}
+
+el("nameBtn").addEventListener("click", setName);
+el("nameInput").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+    event.preventDefault();
+    setName();
+  }
+});
+var playerName;
+function setName() {
+    var inputtedName = el("nameInput").value;
+    if(inputtedName.length < 2) {
+        alert("Fornavnet må være minst 2 bokstaver.")
+        return;
+    }
+    if(inputtedName.includes(" ")) {
+        alert("Bare fornavnet, uten mellomrom — bruk bindestrek (-) for dobbeltnavn.");
+        return;
+    }
+    if(inputtedName.length > 20) {
+        inputtedName = inputtedName.slice(0, 21);
+    }
+    playerName = title(inputtedName);
+
+    el("name").textContent = "Navn: " + playerName;
 }
