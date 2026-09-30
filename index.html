@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ErdetSaveEditor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Erdetspill Save Editor</h1>
+    <br>
+
+    <div id="dropZone">
+        <p>Slipp .cfg-filen din her</p>
+        <p>eller klikk for å velge en fil</p>
+
+        <input type="file" id="fileInput" accept=".cfg" hidden>
+    </div>
+
+    <button id="download-btn" class="orangeBtn" style="display: none;">download</button>
+
+    <div id="inventory-editor">
+        <div id="items">
+            <button id="reset-btn" class="orangeBtn" style="display: none;">reset</button>
+            <button data-item="adgangskort_blatt" style="display: none;">Blått adgangskort</button>
+            <button data-item="adgangskort_gront" style="display: none;">Grønt adgangskort</button>
+            <button data-item="adgangskort_rodt" style="display: none;">Rødt adgangskort</button>
+            <button data-item="approved_application" style="display: none;">Godkjent søknad</button>
+            <button data-item="bilde_nils_jorge" style="display: none;">Bilde av Nils Jorge</button>
+            <button data-item="elgskinn" style="display: none;">Elgskinn</button>
+            <button data-item="erdetol" style="display: none;">Erdetøl</button>
+            <button data-item="erdetsigg" style="display: none;">Erdetsigg</button>
+            <button data-item="erdetsiggmint" style="display: none;">Erdetsigg (mint)</button>
+            <button data-item="fiskestang" style="display: none;">Fiskestang</button>
+            <button data-item="fuglekjott" style="display: none;">Fuglekjøtt</button>
+            <button data-item="fugleskinn" style="display: none;">Kråkefjær</button>
+            <button data-item="gard_plakat" style="display: none;">Gard-plakat</button>
+            <button data-item="god_morgen_yoghurt" style="display: none;">God Morgen Yoghurt</button>
+            <button data-item="grus" style="display: none;">Grus</button>
+            <button data-item="gummi" style="display: none;">Gummi</button>
+            <button data-item="handtak_kupong" style="display: none;">Avslagskort — håndtak</button>
+            <button data-item="icecream" style="display: none;">Is</button>
+            <button data-item="id_card" style="display: none;">ID-kort</button>
+            <button data-item="inheritance_document" style="display: none;">Arvedokument</button>
+            <button data-item="kefir" style="display: none;">Kefir</button>
+            <button data-item="kobber" style="display: none;">Kobberledning</button>
+            <button data-item="kule_sigaretter" style="display: none;">Kule sigaretter</button>
+            <button data-item="painkillers" style="display: none;">Paracet</button>
+            <button data-item="peak_performance_lua" style="display: none;">Peak Performance-caps</button>
+            <button data-item="plast" style="display: none;">Plast</button>
+            <button data-item="stavkirke_nokkel" style="display: none;">Stavkirkenøkkelen</button>
+            <button data-item="stoepsel" style="display: none;">Gigant-støpsel</button>
+            <button data-item="tnt" style="display: none;">TNT + Detonator</button>
+            <button data-item="vaskeri_handtak" style="display: none;">Dørhåndtak</button>
+            <button data-item="vaskeri_nokkel" style="display: none;">Vaskeri-nøkkelen</button>
+            <button data-item="wood_scrap" style="display: none;">Trebit</button>
+        </div>
+
+        <div id="inventory-container">
+            <h2 id="inventory-text" style="display: none;">Inventar</h2>
+
+            <div id="inventory" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

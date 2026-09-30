@@ -1,0 +1,97 @@
+body {
+    color: #dca8ff;
+    background-color: #0a0011;
+    font-family: "VT323", sans-serif;
+}
+
+.vt323-regular {
+  font-family: "VT323", monospace;
+  font-weight: 600;
+  font-style: normal;
+}
+
+#dropZone {
+    border: 2px dashed #9900ff;
+    color: #9900ff;
+    border-radius: 12px;
+    padding: 50px 20px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #0e0018;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+#dropZone:hover,
+#dropZone.dragover {
+    background-color: #1b0d00;
+    border-color: #ff7b00;
+    color: #ff7b00;
+}
+
+#inventory-editor {
+    display: flex;
+}
+
+#inventory-container {
+    margin-left: 50px;
+    height: 500px;
+}
+
+#items {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: space-evenly;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    height: 500px;
+}
+
+#items button {
+    width: fit-content;
+    height: fit-content;
+}
+
+button {
+    color: #b44aff;
+    background-color: #280044;
+
+    border-color: #b44aff;
+    border-style: solid;
+    border-radius: 5px;
+
+    font-family: "VT323", sans-serif;
+    font-size: 20px;
+
+    padding: 5px;
+    margin: 3px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.orangeBtn {
+    color: #ffa34d;
+    background-color: #422000;
+    border-color: #ffa34d;
+}
+
+#download-btn {
+    margin-bottom: 20px;
+}
+
+#inventory {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: space-evenly;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    color: #b44aff;
+    height: 500px;
+}
+
+#inventory p {
+    margin-left: 20px;
+}
