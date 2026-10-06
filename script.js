@@ -44,8 +44,8 @@ fileInput.addEventListener("change", () => {
 
 var CONTENT;
 async function handleFile() {
-    if(!file.name.toLowerCase().endsWith(".cfg")) {
-        alert("Vennligst velg en .cfg-fil!");
+    if(!file.name.toLowerCase().endsWith(".cfg") && !file.name.toLowerCase().endsWith(".erdetlagring")) {
+        alert("Vennligst velg en .cfg- eller .erdetlagring-fil!");
         return;
     }
 
